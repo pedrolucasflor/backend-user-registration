@@ -1,0 +1,6 @@
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.csproj.AssemblyReference.cache
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.AssemblyInfoInputs.cache
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.AssemblyInfo.cs
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.csproj.CoreCompileInputs.cache
+/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/Debug/net6.0/backend-user-registration.MvcApplicationPartsAssemblyInfo.cache

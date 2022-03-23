@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/backend-user-registration.csproj": {}
+  },
+  "projects": {
+    "/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/backend-user-registration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/backend-user-registration.csproj",
+        "projectName": "backend-user-registration",
+        "projectPath": "/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/backend-user-registration.csproj",
+        "packagesPath": "/home/pedrolucasflor/.nuget/packages/",
+        "outputPath": "/home/pedrolucasflor/Documentos/documentos-pedro/cadastro-clientes/backend-user-registration/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/pedrolucasflor/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0-alpha.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/158/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 using backend_user_registration.Data;
 
+var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllers();
-builder.Services.AddDbContext<UserRegistrationContext>(options =>
-    options.UseMySql(connectionString, new MySqlServerVersion(new System.Version(8, 0, 22)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend))
-);
+builder.Services.AddDbContext<UserRegistrationContext>();
 
 var app = builder.Build();
 

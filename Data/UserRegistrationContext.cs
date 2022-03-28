@@ -1,6 +1,5 @@
 using backend_user_registration.Models;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace backend_user_registration.Data
 {
@@ -16,8 +15,8 @@ namespace backend_user_registration.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "server=localhost;database=user_registration;user=root;password=123456";
-            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new System.Version(8, 0, 22)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend));
+            var connectionString = "server=localhost;database=user_registration;user=root;password=123456";
+            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new System.Version(8, 0, 22)));
         }
 
     }

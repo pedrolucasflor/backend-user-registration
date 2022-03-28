@@ -6,38 +6,50 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend_user_registration.Data;
 
-namespace backend_user_registration.Migrations
+#nullable disable
+
+namespace backenduserregistration.Migrations
 {
     [DbContext(typeof(UserRegistrationContext))]
-    [Migration("20220322210201_migration")]
-    partial class migration
+    [Migration("20220326190136_UserRegistrationMigration")]
+    partial class UserRegistrationMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 64)
-                .HasAnnotation("ProductVersion", "5.0.1");
+                .HasAnnotation("ProductVersion", "6.0.3")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("backend_user_registration.Models.Adress", b =>
+            modelBuilder.Entity("backend_user_registration.Models.Address", b =>
                 {
-                    b.Property<string>("id")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
                     b.Property<int?>("Userid")
                         .HasColumnType("int");
+
+                    b.Property<string>("label")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("id");
 
                     b.HasIndex("Userid");
 
-                    b.ToTable("Adress");
+                    b.ToTable("Address");
                 });
 
             modelBuilder.Entity("backend_user_registration.Models.PhoneNumber", b =>
                 {
-                    b.Property<string>("id")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
                     b.Property<int?>("Userid")
                         .HasColumnType("int");
@@ -105,20 +117,20 @@ namespace backend_user_registration.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("socialMediaid")
+                    b.Property<int>("socialMediaid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
 
                     b.HasIndex("socialMediaid");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("backend_user_registration.Models.Adress", b =>
+            modelBuilder.Entity("backend_user_registration.Models.Address", b =>
                 {
                     b.HasOne("backend_user_registration.Models.User", null)
-                        .WithMany("adresses")
+                        .WithMany("addresses")
                         .HasForeignKey("Userid");
                 });
 
@@ -133,14 +145,16 @@ namespace backend_user_registration.Migrations
                 {
                     b.HasOne("backend_user_registration.Models.SocialMedia", "socialMedia")
                         .WithMany()
-                        .HasForeignKey("socialMediaid");
+                        .HasForeignKey("socialMediaid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("socialMedia");
                 });
 
             modelBuilder.Entity("backend_user_registration.Models.User", b =>
                 {
-                    b.Navigation("adresses");
+                    b.Navigation("addresses");
 
                     b.Navigation("phoneNumbers");
                 });

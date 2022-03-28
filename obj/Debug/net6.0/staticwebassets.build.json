@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IQxmFYcbnoXEr4hVeqNCSVlnU/IDw1aWJ1Grfbe1eIo=",
+  "Source": "backend-user-registration",
+  "BasePath": "_content/backend-user-registration",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

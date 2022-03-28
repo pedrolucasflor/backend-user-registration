@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace backend_user_registration.Models
 {
     public class User
@@ -14,7 +16,7 @@ namespace backend_user_registration.Models
 
         public List<PhoneNumber> phoneNumbers { get; set; }
 
-        public List<Adress> adresses { get; set; }
+        public List<Address> addresses { get; set; }
 
         public SocialMedia socialMedia { get; set; }
 
